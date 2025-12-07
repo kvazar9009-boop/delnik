@@ -99,48 +99,54 @@
             color: #fff;
         }
     /* ========================= */
-/* МОБИЛЬНАЯ ВЕРСИЯ */
-/* ========================= */
-
+/* ------------------ МОБИЛЬНАЯ АДАПТАЦИЯ ------------------ */
 @media (max-width: 768px) {
 
   body {
+    background-position: center;
     overflow-x: hidden;
   }
 
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .container {
+    max-width: 100%;
     padding: 10px;
   }
 
-  .logo {
-    max-width: 140px;
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .logo-block {
     margin-bottom: 10px;
   }
 
   .title-block {
-    margin-left: 0 !important;
+    margin: 0;
+  }
+
+  .title-block h1 {
+    font-size: 28px;
+  }
+
+  .title-block p {
+    font-size: 14px;
   }
 
   .messengers {
-    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  .messengers a {
-    font-size: 14px;
-    padding: 8px 14px;
-  }
-
-  .section {
-    width: 95%;
-    margin: 20px auto;
-    padding: 15px;
+  .card {
+    width: 100%;
+    margin: 0 auto 16px auto;
   }
 
   .product-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .product-grid img {
@@ -148,16 +154,18 @@
     height: auto;
   }
 
-  .marketplace-logos {
+  .marketplace-buttons {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
 
-  .marketplace-logos img {
-    max-width: 180px;
+  .marketplace-buttons a {
+    width: 100%;
+    text-align: center;
   }
 
 }
+
 </style>
 </head>
 <body>
