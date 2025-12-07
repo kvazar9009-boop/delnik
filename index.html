@@ -1,255 +1,221 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Дельник — столярная мастерская</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('background-wood.jpg') repeat; background-size: auto;
-            color: #2b2b2b;
-        }
-        header {
-            background: linear-gradient(90deg, #e6d3b1, #c6d4b2);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 40px;
-            border-bottom: 5px solid #3e5f3e;
-        }
-        .logo-block {
-            display: flex;
-            align-items: center;
-        }
-        .logo-block img {
-            height: 220px; /* увеличено по требованию */
-        }
-        .logo-text {
-            margin-left: 120px; /* смещено правее */
-        }
-        .logo-text h1 {
-            margin: 0;
-            font-size: 48px;
-        }
-        .logo-text p {
-            margin: 5px 0 0;
-            font-size: 18px;
-        }
-        .messengers a {
-            margin-left: 10px;
-            padding: 14px 24px;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .wa {background: #25D366;}
-        .tg {background: #0088CC;}
+  <meta charset="UTF-8">
+  <title>Дельник — столярная мастерская</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .section {
-            max-width: 1100px;
-            margin: 40px auto;
-            background: #f7f3ec;
-            border-radius: 20px;
-            padding: 35px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("background-wood.jpg") center/cover no-repeat;
+    }
 
-        h2 {
-            color: #3e5f3e;
-        }
+    .wrapper {
+      max-width: 1100px;
+      margin: 40px auto;
+    }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
+    header {
+      background: #d9deb8;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      border-bottom: 5px solid #5c7446;
+    }
 
-        .gallery img {
-            width: 100%;
-            border-radius: 12px;
-            object-fit: cover;
-        }
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-        .marketplaces {
-            display: flex;
-            gap: 40px;
-            margin-top: 20px;
-        }
+    .logo-block img {
+      height: 200px;
+    }
 
-        .marketplaces img {
-            height: 70px;
-        }
+    .logo-text h1 {
+      margin: 0;
+      font-size: 44px;
+    }
 
-        .colors {
-            margin-top: 10px;
-            font-weight: bold;
-        }
+    .logo-text p {
+      margin: 5px 0 0 0;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            background: #2b2b2b;
-            color: #fff;
-        }
-    /* ========================= */
-/* ------------------ МОБИЛЬНАЯ АДАПТАЦИЯ ------------------ */
-@media (max-width: 768px) {
+    .messengers a {
+      margin-left: 10px;
+      text-decoration: none;
+      background: #2ecc71;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
 
-  body {
-    background-position: center;
-    overflow-x: hidden;
-  }
+    .section {
+      background: #f8f4eb;
+      border-radius: 20px;
+      padding: 25px;
+      margin: 30px 0;
+    }
 
-  .container {
-    max-width: 100%;
-    padding: 10px;
-  }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
-  .header {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px 10px;
-  }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+    }
 
-  .logo-block {
-    margin-bottom: 10px;
-  }
+    .marketplaces {
+      display: flex;
+      gap: 40px;
+      margin-top: 15px;
+    }
 
-  .title-block {
-    margin: 0;
-  }
+    .marketplaces img {
+      height: 80px;
+    }
 
-  .title-block h1 {
-    font-size: 28px;
-  }
+    footer {
+      text-align: center;
+      color: white;
+      background: #222;
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 40px;
+    }
 
-  .title-block p {
-    font-size: 14px;
-  }
+    /* ✅ МОБИЛЬНАЯ АДАПТАЦИЯ — ИСПРАВЛЕННАЯ */
+    @media (max-width: 768px) {
 
-  .messengers {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+      body {
+        overflow-x: hidden;
+        background-position: center;
+      }
 
-  .card {
-    width: 100%;
-    margin: 0 auto 16px auto;
-  }
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 10px;
+      }
 
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
+      .logo-block {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .product-grid img {
-    width: 100%;
-    height: auto;
-  }
+      .logo-block img {
+        height: 120px;
+      }
 
-  .marketplace-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
+      .logo-text h1 {
+        font-size: 30px;
+      }
 
-  .marketplace-buttons a {
-    width: 100%;
-    text-align: center;
-  }
+      .logo-text p {
+        font-size: 14px;
+      }
 
-}
+      .messengers {
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
 
-</style>
+      .section {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .marketplaces {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .marketplaces img {
+        height: 65px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo-block">
-        <img src="logo.png" alt="Дельник">
+  <div class="wrapper">
+
+    <header>
+      <div class="logo-block">
+        <img src="logo.png">
         <div class="logo-text">
-            <h1>ДЕЛЬНИК</h1>
-            <p>Столярная мастерская</p>
+          <h1>ДЕЛЬНИК</h1>
+          <p>Столярная мастерская</p>
         </div>
+      </div>
+
+      <div class="messengers">
+        <a href="#">WhatsApp</a>
+        <a href="#" style="background:#3498db;">Telegram</a>
+      </div>
+    </header>
+
+    <div class="section">
+      <h2>О мастерской</h2>
+      <p>
+        «Дельник» — это производство мебельных опор из бука и берёзы.
+        Натуральное дерево, точная геометрия, ручная доводка и строгий контроль качества.
+      </p>
     </div>
-    <div class="messengers">
-        <a class="wa" href="https://wa.me/79139236666" target="_blank">WhatsApp</a>
-        <a class="tg" href="https://t.me/delniksm" target="_blank">Telegram</a>
+
+    <div class="section">
+      <h2>Наша продукция</h2>
+      <div class="gallery">
+        <img src="1.jpg">
+        <img src="2.jpg">
+        <img src="3.jpg">
+        <img src="4.jpg">
+      </div>
     </div>
-</header>
 
-<section class="section">
-    <h2>О мастерской</h2>
-    <p>«Дельник» — это производство мебельных опор из бука и берёзы. Натуральное дерево, точная геометрия, ручная доводка и строгий контроль качества — основа нашей работы.</p>
-</section>
-
-<section class="section">
-    <h2>Наша продукция</h2>
-    <div class="gallery">
-
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-<img src="photo4.jpg">
-<img src="photo5.jpg">
-<img src="photo6.jpg">
-<img src="photo7.jpg">
-<img src="photo8.jpg">
-<img src="photo9.jpg">
-<img src="photo10.jpg">
-<img src="photo11.jpg">
-<img src="photo12.jpg">
-<img src="photo13.jpg">
-<img src="photo14.jpg">
-<img src="photo15.jpg">
-<img src="photo16.jpg">
-<img src="photo17.jpg">
-<img src="photo18.jpg">
-<img src="photo19.jpg">
-<img src="photo20.jpg">
-
-
+    <div class="section">
+      <h2>Прайс</h2>
+      <p>Цены от 100 ₽</p>
+      <p>Изготавливаем по индивидуальным размерам</p>
     </div>
-</section>
 
-<section class="section">
-    <h2>Прайс</h2>
-    <p><b>Цены от 100 ₽</b></p>
-    <p>* Можем изготовить мебельные опоры по вашим размерам.<br>
-    Сложные и нестандартные заказы принимаем только при оптовой покупке от 100 опор.</p>
-    <div class="colors">
-        Цвета: чёрный, венге, тёмный орех, светлый орех
+    <div class="section">
+      <h2>Где купить</h2>
+      <div class="marketplaces">
+        <img src="ozon.png">
+        <img src="wildberries.png">
+      </div>
     </div>
-</section>
 
-<section class="section">
-    <h2>Где купить</h2>
-    <div class="marketplaces" style="align-items:center;">
-        <a href="https://www.ozon.ru/seller/delnik-2628603/" target="_blank" aria-label="Ozon" style="display:inline-block; text-decoration:none; margin-right:30px;">
-            <img src="ozon.svg" alt="OZON" style="height:80px; vertical-align:middle;">
-        </a>
-        <a href="https://www.wildberries.ru/seller/4564011" target="_blank" aria-label="Wildberries" style="display:inline-block; text-decoration:none;">
-            <img src="wb.svg" alt="Wildberries" style="height:80px; vertical-align:middle;">
-        </a>
+    <div class="section">
+      <h2>Контакты</h2>
+      <p>Заказы принимаем напрямую:</p>
+      <a href="#">WhatsApp</a> | <a href="#">Telegram</a>
     </div>
-</section>
 
-<section class="section">
-    <h2>Контакты</h2>
-    <p>Заказы принимаем напрямую:</p>
-    <p><a href="https://wa.me/79139236666" target="_blank">WhatsApp</a> |
-       <a href="https://t.me/delniksm" target="_blank">Telegram</a></p>
-</section>
+    <footer>
+      © Дельник — столярная мастерская
+    </footer>
 
-<footer>
-    © Дельник — столярная мастерская
-</footer>
+  </div>
 
 </body>
 </html>
