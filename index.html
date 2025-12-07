@@ -98,7 +98,67 @@
             background: #2b2b2b;
             color: #fff;
         }
-    </style>
+    /* ========================= */
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo {
+    max-width: 140px;
+    margin-bottom: 10px;
+  }
+
+  .title-block {
+    margin-left: 0 !important;
+  }
+
+  .messengers {
+    margin-top: 10px;
+  }
+
+  .messengers a {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .section {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .marketplace-logos {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .marketplace-logos img {
+    max-width: 180px;
+  }
+
+}
+</style>
 </head>
 <body>
 
